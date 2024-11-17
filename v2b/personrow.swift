@@ -8,11 +8,30 @@
 import SwiftUI
 
 struct personrow: View {
+   
+    @State var thename : String
+    
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack{
+            
+            Text(thename)
+                .foregroundColor(Color.white)
+            Spacer()
+            VStack{}
+                .frame(width: 20,height: 20)
+                .background(Color.red)
+            
+        }
+        .frame(height: 60 )
+        .background(Color.blue)
+        
+        
+        
+        
     }
 }
 
 #Preview {
-    personrow()
+    personrow(thename: "banan!")
 }
